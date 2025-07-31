@@ -1,13 +1,16 @@
-import java.util.*;
+import java.io.*;
 public class Handling{
 	
 	public static void main(String []args){
-		String filename="hell.txt";
-		try{
-			FileWriter writer =new FileWriter(filename);
-			writer.write("I am writing");
+		String filename="Radhe.txt";
+		try(FileWriter writer =new FileWriter (filename)){
+			for (int i=0;i<100;i++){
+				writer.write("Radhe");
+				
+			}
+			
 			writer.flush();
-			System.out.println("file writen successfully");
+			System.out.println("Chanting Successfully");
 			
 		}
 		catch(IOException ex){
